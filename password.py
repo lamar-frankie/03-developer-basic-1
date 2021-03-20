@@ -5,46 +5,40 @@
 #Program Notes
 #TODO Fill out the program notes
 """
-Aurthor : [Your name here]
-Email   : [Your email address here]
-Purpose : [What does this program do?]
-Date    : [Date of completion]
+Aurthor : [Courtney Heba]
+Email   : [Courtney.heba@gmail.com]
+Purpose : [Random password generator]
+Date    : [3/20/2021]
 """
 
 
 import argparse
 import random
 
+password_length = int(input("How many charaters would you like your password? "))
 
-#-------------------------------------------------------------------------
-#TODO: Ask the user how long they would like their new password to be
-password_length = int(input("<prompt user for password length>") or 8 ) #default length is 8
+# create lists
+list_symbols = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
-#A list if symbols we can use in our password
-symbols_list = ['!', '@', '#', '%', '&', '*']
+list_num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-#TODO: Create a list of numbers 0 - 9
-numbers_list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+lowercase_list = ["a", "b", "c", "v", "q", "u", "x", "p", "q", "y"]
 
-#TODO: Create a list of the 10 least used lowercase letters in the english language
-lowercase_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+uppercase_list = ["A", "B", "S", "C", "T", "W", "R", "M", "N", "J"]
 
-#TODO: Create a list of the 10 most use used uppercase letters in the english language
-uppercase_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-
-#TODO: Join the 4 lists together to form a password character bank
-password_character_bank = " " 
-
-#We are going to loop over the password character bank and choose a character at random
-#That character will be added to our password
+# create a join to join the 4 lists together
+password_character_bank = list_symbols + list_num + lowercase_list + uppercase_list
+# loop over password character bank and choose a character at random
+# that character will be added to our password
 password = []
 
-#TODO: Loop over password character bank and choose a character at random
+# loop over password character bank and choose a character at random
 for x in range(password_length):
     password.append(random.choice(password_character_bank))
 
-#print the password out to the user
-print(''.join(password))
+# print random password to user
+print(password)
 
-#Bonus
-#TODO: Copy the generated password to the users clip board
+#BONUS
+How many charaters would you like your password? 4
+['@', 'x', 'W', 'B']
