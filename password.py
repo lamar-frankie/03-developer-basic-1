@@ -44,7 +44,7 @@ for x in range(password_length):
     password.append(random.choice(password_character_bank))
 
 #print the password out to the user
-print(''.join(str(password)))
+print(''.join(password))
 
 #Bonus
 #TODO: Copy the generated password to the users clip board
